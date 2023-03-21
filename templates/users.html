@@ -1,0 +1,27 @@
+{% extends 'home.html' %}
+
+{% block title %}
+Список пользователей
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>Список</h1>
+
+    {% if user|length > 0 %}
+        {% for el in user %}
+        <div class="alert alert-info">
+            <h2>{{ el.title }}</h2>
+            <p>{{ el.intro }}</p>
+            <p>{{ el.text }}</p>
+            <p><b>Дата: {{ el.date.date() }}</b></p>
+            <a href="/users/{{ el.id }}" class="btn btn-warning">Детальнее</a>
+        </div>
+        {% endfor %}
+    {% else %}
+    <p>Список пуст</p>
+    {% endif %}
+
+    <li class="btn btn-warning"><a href="/users-list" class="nav-link">Создать/Добавить пользователя</a></li>
+</div>
+{% endblock %}

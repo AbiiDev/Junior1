@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+        <span class="fs-4">Сайт</span>
+      </a>
+
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="/" class="nav-link active" aria-current="page">Главная страница</a></li>
+        <li class="nav-item"><a href="/users" class="nav-link">Пользователи</a></li>
+        <li class="nav-item"><a href="/about" class="nav-link">Информация о сайте</a></li>
+        <li class="nav-item"><a href="/login" class="nav-link">Страница авторизации</a></li>
+      </ul>
+    </header>
+    {% block body %}<h1 class="container m-5">Главная страница сайта</h1>{% endblock %}
+
+<footer class="container py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+       <li class="nav-item"><a href="/" class="nav-link active" aria-current="page">Главная страница</a></li>
+       <li class="nav-item"><a href="/users" class="nav-link">Пользователи</a></li>
+       <li class="nav-item"><a href="/about" class="nav-link">Информация о сайте</a></li>
+       <li class="nav-item"><a href="/login" class="nav-link">Страница авторизации</a></li>
+    </ul>
+    <p class="text-center text-muted">© 2023 Сайт</p>
+  </footer>
+</body>
+</html>

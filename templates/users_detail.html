@@ -1,0 +1,19 @@
+{% extends 'home.html' %}
+
+{% block title %}
+{{ user_detail.title }}
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+<h1>{{ user_detail.title }}</h1>
+
+    <div class="alert alert-info">
+        <h2>{{ user_detail.title }}</h2>
+        <p>{{ user_detail.intro }}</p>
+        <p><b>Дата: {{ user_detail.date.date() }}</b></p>
+        <a href="/users/{{ user_detail.id }}/delete" class="btn btn-danger">Удалить</a>
+        <a href="/users/{{ user_detail.id }}/update" class="btn btn-success">Редактировать</a>
+    </div>
+</div>
+{% endblock %}

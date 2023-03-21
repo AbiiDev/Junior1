@@ -1,0 +1,17 @@
+{% extends 'home.html' %}
+
+{% block title %}
+Пользователи
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+<h1>Создать/Добавить пользователя</h1>
+    <form method="post">
+        <input type="text" name="title" id="title" class="form-control" placeholder="Введите ФИО"><br>
+        <textarea name="intro" id="intro" cols="38" class="form-control" placeholder="Введите Данные Пользователя"></textarea><br>
+        <textarea name="text" id="text" cols="text" class="form-control" placeholder="Введите дополнительную инфомацию"></textarea><br>
+      <input type="submit" class="btn btn-success" value="Добавить|Создать">
+    </form>
+</div>
+{% endblock %}

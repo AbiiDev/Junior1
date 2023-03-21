@@ -1,0 +1,17 @@
+{% extends 'home.html' %}
+
+{% block title %}
+Редактирования пользователя
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>Редактирования пользователя</h1>
+    <form method="post">
+        <input type="text" name="title" id="title" class="form-control" value="{{ user_update.title }}" placeholder="Введите Фио"><br>
+        <textarea name="intro" id="intro" cols="38" class="form-control" placeholder="Введите данные пользователя">{{ user_update.intro }}</textarea><br>
+        <textarea name="text" id="text" cols="text" class="form-control" placeholder="Введите доп. инфо">{{ user_update.text }}</textarea><br>
+      <input type="submit" class="btn btn-success" value="Редактировать">
+    </form>
+</div>
+{% endblock %}
